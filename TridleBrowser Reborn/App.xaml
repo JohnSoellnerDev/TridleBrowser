@@ -1,0 +1,11 @@
+﻿<Application x:Class="TridleBrowser_Reborn.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TridleBrowser_Reborn"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="wbBackground" Color="#222831"/>
+        <SolidColorBrush x:Key="wbSecondaryBack" Color="#393e46"/>
+        <SolidColorBrush x:Key="wbGrey" Color="#eeeeee"/>
+    </Application.Resources>
+</Application>

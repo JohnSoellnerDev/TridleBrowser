@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TridleBrowser Reborn", "TridleBrowser Reborn\TridleBrowser Reborn.csproj", "{2262D4C8-7386-4716-8E7D-2066DB6F1572}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Debug|x64.ActiveCfg = Debug|x64
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Debug|x64.Build.0 = Debug|x64
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Release|x64.ActiveCfg = Release|x64
+		{2262D4C8-7386-4716-8E7D-2066DB6F1572}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAD3C81E-89C7-4F2E-B908-9C3C370EF446}
+	EndGlobalSection
+EndGlobal
