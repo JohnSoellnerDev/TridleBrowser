@@ -106,18 +106,8 @@ namespace TridleBrowser_Reborn
 
         private void img_Settings_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            string exePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Data.exe");
-            
-            ProcessStartInfo startInfo = new ProcessStartInfo
-            {
-                FileName = exePath,
-                UseShellExecute = true
-            };
-            
-            Process.Start(startInfo);
-
-            //SettingsWindow settingsWindow = new SettingsWindow();
-            //settingsWindow.Show();
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.Show();
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)

@@ -157,6 +157,12 @@
   <ItemGroup>
     <Resource Include="Firmenbild.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bearbeiten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="globus.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

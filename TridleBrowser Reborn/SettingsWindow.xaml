@@ -20,6 +20,15 @@
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
+
+            <Image Source="/bearbeiten.png" Margin="5,5,5,5"></Image>
+            <Image Grid.Row="1" Source="/globus.png" Margin="5,5,5,5"></Image>
         </Grid>
+
+        <StackPanel Grid.Column="1" Margin="20,20,20,20">
+            <RadioButton x:Name="Radio_Google" IsChecked="False" Background="{DynamicResource wbGrey}">
+                
+            </RadioButton>
+        </StackPanel>
     </Grid>
 </Window>
