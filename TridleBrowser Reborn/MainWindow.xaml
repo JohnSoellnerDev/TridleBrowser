@@ -24,10 +24,10 @@
                 <ColumnDefinition Width="40"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image x:Name="img_Back" Source="/winkel-links.png" Margin="7.5,7.5,7.5,7.5" MouseDown="img_Back_MouseDown"></Image>
-            <Image x:Name="img_Forward" Source="/winkel-rechts.png" Margin="7.5,7.5,7.5,7.5" Grid.Column="1" MouseDown="img_Forward_MouseDown"></Image>
-            <Image x:Name="img_Reload" Source="/aktualisierung.png" Margin="7.5,7.5,7.5,7.5" Grid.Column="2" MouseDown="img_Reload_MouseDown"></Image>
-            <TextBox x:Name="txt_Url" Grid.Column="3" Background="{DynamicResource wbBackground}" Margin="10,6.5,10,6.5" Foreground="#FFEEEEEE" KeyDown="txt_Url_KeyDown"></TextBox>
+            <Image x:Name="img_Back" Source="/winkel-links.png" Margin="7.5,7.5,7.5,7.5" MouseDown="Img_Back_MouseDown"></Image>
+            <Image x:Name="img_Forward" Source="/winkel-rechts.png" Margin="7.5,7.5,7.5,7.5" Grid.Column="1" MouseDown="Img_Forward_MouseDown"></Image>
+            <Image x:Name="img_Reload" Source="/aktualisierung.png" Margin="7.5,7.5,7.5,7.5" Grid.Column="2" MouseDown="Img_Reload_MouseDown"></Image>
+            <TextBox x:Name="txt_Url" Grid.Column="3" Background="{DynamicResource wbBackground}" Margin="10,6.5,10,6.5" Foreground="#FFEEEEEE" KeyDown="Txt_Url_KeyDown"></TextBox>
             <Image x:Name="img_Settings" Source="/einstellungen.png" Margin="7.5,7.5,7.5,7.5" Grid.Column="4" MouseDown="img_Settings_MouseDown"></Image>
         </Grid>
     </Grid>

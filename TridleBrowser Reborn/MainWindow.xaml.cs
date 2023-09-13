@@ -1,40 +1,24 @@
 ﻿using CefSharp.Wpf;
 using CefSharp;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.IO;
 using System.ComponentModel;
 
 namespace TridleBrowser_Reborn
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        private string cachePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BrowserCookies");
+        private readonly string _cachePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BrowserCookies");
 
         public MainWindow()
         {
 
-            if (!Directory.Exists(cachePath))
+            if (!Directory.Exists(_cachePath))
             {
-                Directory.CreateDirectory(cachePath);
+                Directory.CreateDirectory(_cachePath);
             }
-
-            var settings = new CefSettings
-            {
-                CachePath = cachePath
-            };
 
             InitializeComponent();
 
@@ -46,7 +30,7 @@ namespace TridleBrowser_Reborn
             }
         }
 
-        private void img_Back_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Img_Back_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (Webbrowser.CanGoBack)
             {
@@ -54,14 +38,14 @@ namespace TridleBrowser_Reborn
             }
         }
 
-        private void img_Forward_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Img_Forward_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (Webbrowser.CanGoForward)
             {
                 Webbrowser.Forward();
             }
         }
-        private void img_Reload_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Img_Reload_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Webbrowser.Reload();
         }
@@ -74,7 +58,7 @@ namespace TridleBrowser_Reborn
             }
         }
 
-        private void txt_Url_KeyDown(object sender, KeyEventArgs e)
+        private void Txt_Url_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -88,21 +72,15 @@ namespace TridleBrowser_Reborn
                     }
                     else
                     {
-                        text = "http://" + text;
+                        text = "http://www." + text;
                     }
                 }
 
-                if (Uri.IsWellFormedUriString(text, UriKind.Absolute))
-                {
-                    Webbrowser.Load(text);
-                }
-                else
-                {
-                    string googleUrl = "https://www.google.com/search?q=" + Uri.EscapeDataString(text);
-                    Webbrowser.Load(googleUrl);
-                }
+                string url = Uri.IsWellFormedUriString(text, UriKind.Absolute) ? text : "https://www.google.com/search?q=" + Uri.EscapeDataString(text);
+                Webbrowser.Load(url);
             }
         }
+
 
         private void img_Settings_MouseDown(object sender, MouseButtonEventArgs e)
         {
