@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TridleBrowser_Reborn.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
@@ -11,5 +11,12 @@
     <Setting Name="savedIsMaximized" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="homepageUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">www.google.com</Value>
+    </Setting>
+    <Setting Name="defaultSearchEngine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Google</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
+

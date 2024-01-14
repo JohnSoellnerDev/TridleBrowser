@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:TridleBrowser_Reborn"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <SolidColorBrush x:Key="wbBackground" Color="#222831"/>
-        <SolidColorBrush x:Key="wbSecondaryBack" Color="#393e46"/>
-        <SolidColorBrush x:Key="wbGrey" Color="#eeeeee"/>
+        <SolidColorBrush x:Key="wbMainBackground" Color="#303A42"/>
+        <SolidColorBrush x:Key="wbBackground" Color="#303443"/>
+        <SolidColorBrush x:Key="wbSecondBackground" Color="#23252f"/>
     </Application.Resources>
 </Application>
