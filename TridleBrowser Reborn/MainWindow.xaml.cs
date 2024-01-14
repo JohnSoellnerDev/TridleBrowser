@@ -28,6 +28,7 @@ namespace TridleBrowser_Reborn
             SetWindowProperties();
             
             Webbrowser.Address = Properties.Settings.Default.homepageUrl;
+            Console.WriteLine(System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
         }
         
         protected override void OnKeyDown(KeyEventArgs e)

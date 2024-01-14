@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace TridleBrowser_Reborn
 {
@@ -42,8 +33,41 @@ namespace TridleBrowser_Reborn
                 Properties.Settings.Default.defaultSearchEngine = (string)selectedItem.Content;
             }
             Properties.Settings.Default.Save();
-            
+
             Console.WriteLine("defaultSearchEngine: " + Properties.Settings.Default.defaultSearchEngine);
+        }
+
+        private async void btnCheckUpdates_Click(object sender, RoutedEventArgs e)
+        {
+            var client = new Octokit.GitHubClient(new Octokit.ProductHeaderValue("TridleBrowser"));
+            var releases = await client.Repository.Release.GetAll("TridleGamesSV", "TridleBrowser");
+            var latest = releases[0];
+
+            var currentVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            var latestVersion = new Version(latest.TagName.TrimStart('v'));
+
+            if (latestVersion > currentVersion)
+            {
+                var result = MessageBox.Show($"Do you want to update to the latest version {latestVersion}?", "Update available", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    var asset = latest.Assets.First(a => a.Name == "TridleBrowser.exe");
+                    var assetUrl = asset.BrowserDownloadUrl;
+
+                    using (var webClient = new System.Net.WebClient())
+                    {
+                        var path = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TridleBrowser.exe");
+                        await webClient.DownloadFileTaskAsync(new Uri(assetUrl), path);
+                    }
+
+                    System.Diagnostics.Process.Start(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TridleBrowser.exe"));
+                }
+            }
+            else
+            {
+                MessageBox.Show("Everything is up to date", "No updates available", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }
