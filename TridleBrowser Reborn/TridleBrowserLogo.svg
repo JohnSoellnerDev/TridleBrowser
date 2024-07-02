@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer circle -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a1a"/>
+  
+  <!-- Colored segments -->
+  <path d="M50 50 L98 50 A48 48 0 0 1 74 91 Z" fill="#FF4444"/>
+  <path d="M50 50 L74 91 A48 48 0 0 1 26 91 Z" fill="#4CAF50"/>
+  <path d="M50 50 L26 91 A48 48 0 0 1 2 50 Z" fill="#2196F3"/>
+  
+  <!-- Center circle -->
+  <circle cx="50" cy="50" r="20" fill="url(#centerGrad)" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- Highlight -->
+  <path d="M50 30 A20 20 0 0 1 70 50 L50 50 Z" fill="#FFFFFF" opacity="0.3"/>
+</svg>

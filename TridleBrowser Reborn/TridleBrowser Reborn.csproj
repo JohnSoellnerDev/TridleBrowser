@@ -63,7 +63,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Firmenbild.ico</ApplicationIcon>
+    <ApplicationIcon>TridleBrowserLogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CefSharp, Version=120.2.50.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
@@ -175,6 +175,10 @@
   <ItemGroup>
     <Resource Include="left-arrow.png" />
     <Resource Include="right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TridleBrowserLogo.ico" />
+    <Content Include="TridleBrowserLogo.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

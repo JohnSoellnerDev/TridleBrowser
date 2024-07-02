@@ -8,6 +8,7 @@
         xmlns:fluent="urn:fluent-ribbon"
         xmlns:controlzex="urn:controlzex"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         x:Class="TridleBrowser_Reborn.MainWindow"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
